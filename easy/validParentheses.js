@@ -6,32 +6,32 @@
 // Open brackets must be closed in the correct order.
 
 const isValid = function(s) {
-  if(s === "" ){
-    return false;
+  if (s === "") {
+      return false;
   }
-  if(s.length < 2){
-    return false;
+  if (s.length < 2) {
+      return false;
   }
-//need to check for matching brackets: 
-//map the correct brackets:
+  //need to check for matching brackets: 
+  //map the correct brackets:
   const correctBrackets = {
-    '(': ')',
-    '[': ']',
-    '{': '}'
+      '(': ')',
+      '[': ']',
+      '{': '}'
   }
   const result = [];
 
-  for(let i = 0; i < s.length; i++){
-    let currentEle = s[i];
-    
-    if (currentEle === '(' || currentEle === '{' || currentEle === '['){
-      result.push(currentEle);
-    } else {
-      currentBracket = result.pop();
-      if(correctBrackets[currentBracket] !== currentEle ){
-        return false;
+  for (let i = 0; i < s.length; i++) {
+      let currentEle = s[i];
+
+      if (currentEle === '(' || currentEle === '{' || currentEle === '[') {
+          result.push(currentEle);
+      } else {
+          currentBracket = result.pop();
+          if (correctBrackets[currentBracket] !== currentEle) {
+              return false;
+          }
       }
-    }
   }
   //if there's element left: false, otherwise: result.length === 0 and it is true
   return result.length === 0
