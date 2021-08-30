@@ -9,7 +9,6 @@ const searchInsert = function(nums, target) {
   while (start <= end) {
       mid = Math.floor((start + end) / 2);
 
-
       if (target > nums[mid]) {
           if (target < nums[mid + 1]) {
               return mid + 1;

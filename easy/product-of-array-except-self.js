@@ -22,5 +22,6 @@ const productExceptSelf = function(nums) {
   return leftArray
 };
 
+//test case:
 nums = [5,1,2,1]
 productExceptSelf(nums);

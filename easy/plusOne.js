@@ -16,5 +16,5 @@ const plusOne = function(digits) {
   return digits;
 };
 
-digits = [9];
+digits = [1,9];
 plusOne(digits);

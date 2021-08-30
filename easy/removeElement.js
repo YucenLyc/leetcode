@@ -15,3 +15,4 @@ const removeElement = function(nums, val) {
 nums = [2, 2, 3, 2, 1, 5, 6];
 val = 3;
 removeElement(nums, val);
+
