@@ -22,7 +22,6 @@ const merge = function(intervals) {
           result.push(intervals[i]);
       }
   }
-  //console.log(result);
   return result;
 };
 
