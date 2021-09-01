@@ -20,7 +20,6 @@ const isAnagram = function (s, t) {
   let letterCount = {};
 
   for (let letter of s) {
-    //console.log(letterCount[letter])
     if (letterCount[letter] === undefined) {
       letterCount[letter] = 1;
     } 
