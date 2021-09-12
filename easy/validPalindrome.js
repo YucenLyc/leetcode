@@ -3,8 +3,8 @@
 const isPalindrome = function(s) {
   s = s.toLowerCase().replace(/[^0-9a-z]/g, "");
   let k = s.split("").reverse().join("");
-  if (s === k){
-    return true;
+  if (s === k) {
+      return true;
   };
   return false;
 };
