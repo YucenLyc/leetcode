@@ -6,13 +6,16 @@ const maxDepth = function (root) {
   if (root === null) {
     return 0;
   };
-  if (root.left && root.right) {
-    let l = maxDepth(root.left)
-    let r = maxDepth(root.right)
-    return Math.max(left, right) + 1;
+  let leftDepth = maxDepth(root.left)
+  let rightDepth = maxDepth(root.right)
+
+  if (leftDepth > rightDepth) {
+    return leftDepth + 1;
+  } else {
+    return rightDepth + 1;
   }
 };
 
 // test case:
-root = [1,null,2];
+root = [1, null, 2];
 maxDepth(root);

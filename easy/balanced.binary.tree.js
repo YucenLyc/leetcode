@@ -22,7 +22,6 @@ let getHeight = function (node) {
   if (left === -1 || right === -1 || Math.abs(left - right) > 1){
     return -1;
   };
-
   // +1 is calculating the height of the tree
   return Math.max(left, right) + 1;
 };

@@ -5,7 +5,7 @@ const eraseOverlapIntervals = function(intervals) {
       return a[1] - b[1];
   };
   intervals = intervals.sort(compare);
-  // console.log(intervals[0]);
+  
   let prev = intervals[0]
   let count = 0;
   for (let i = 1; i < intervals.length; i++) {
