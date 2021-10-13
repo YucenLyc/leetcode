@@ -3,22 +3,42 @@
 
 // ** you may use an element of the array as many times as you need **
 
-const canSum = (targetSum, numbers) => {
+// intuitive solution: 
+// const canSum = (targetSum, numbers) => {
+//   if (targetSum === 0) return true;
+//   if (targetSum < 0) return false;
+
+//   for (let num of numbers) {
+//     const remainder = targetSum - num;
+
+//     if (canSum(remainder, numbers) === true) {
+//       return true;
+//     }
+//   };
+//   return false;
+// };
+
+// memoization solution: 
+
+const canSum = (targetSum, numbers, memo={}) => {
+  if (targetSum in memo) return memo[targetSum];
   if (targetSum === 0) return true;
   if (targetSum < 0) return false;
 
   for (let num of numbers) {
-    //console.log(num)
     const remainder = targetSum - num;
-    if (canSum(remainder, numbers) === true) {
+
+    if (canSum(remainder, numbers, memo) === true) {
+      memo[targetSum] = true;
       return true;
     }
-  }
+  };
+  memo[targetSum] = false;
   return false;
-};
+}
 
 // test case: 
 targetSum = 7;
-numbers = [2, 4, 3]
+numbers = [2,3]
 console.log(canSum(targetSum, numbers));
 // expected output: true
