@@ -25,7 +25,8 @@ const isValid = function(s) {
       let currentEle = s[i];
 
       if (currentEle === '(' || currentEle === '{' || currentEle === '[') {
-          result.push(currentEle);
+          result.push(currentEle)
+          console.log(currentEle)
       } else {
           currentBracket = result.pop();
           if (correctBrackets[currentBracket] !== currentEle) {
@@ -36,3 +37,7 @@ const isValid = function(s) {
   //if there's element left: false, otherwise: result.length === 0 and it is true
   return result.length === 0
 }
+
+
+s = "()[]{}";
+console.log(isValid(s));

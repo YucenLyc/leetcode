@@ -12,7 +12,6 @@ const maxProfit = function(prices) {
   for (let price of prices) {
       if (price < minBuyPrice) {
           minBuyPrice = price;
-
       } else if (price - minBuyPrice > maxProfit) {
           maxProfit = price - minBuyPrice;
       }

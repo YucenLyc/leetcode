@@ -12,7 +12,6 @@ const canAttendMeetings = function (intervals) {
   }
   return true;
 };
-
 // test case: 
 intervals = [[0, 30], [5, 10], [15, 20]]
 canAttendMeetings(intervals);

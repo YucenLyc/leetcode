@@ -19,7 +19,6 @@ function checkEqual(mat, target) {
   return true
 }
 
-
 function rotate(matrix) {
   // Swap diagonally from top left to bottom right
   for(let i = 0; i < matrix.length; i++) {

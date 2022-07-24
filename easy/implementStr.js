@@ -34,4 +34,4 @@ const strStr = function (haystack, needle) {
 
 haystack = "mississippi";
 needle = "issip";
-strStr(haystack, needle);
+strStr(haystack, needle); // output: 4
